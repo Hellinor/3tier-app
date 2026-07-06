@@ -1,5 +1,7 @@
 # 3-tier app
 
+![CI](https://github.com/Hellinor/3tier-app/actions/workflows/ci.yml/badge.svg)
+
 A containerized 3-tier web application built with Docker Compose. It serves a visit
 counter that shows a web frontend, a backend API, and a database working together.
 
