@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>3-tier app</title>
+</head>
+<body>
+  <h1>3-tier app</h1>
+  <p id="result">Loading...</p>
+  <button onclick="loadVisits()">Refresh</button>
+  <script>
+    async function loadVisits() {
+      const response = await fetch("/api");
+      const data = await response.json();
+      document.getElementById("result").textContent =
+        data.message + " — visits: " + data.visits;
+    }
+    loadVisits();
+  </script>
+</body>
+</html>
